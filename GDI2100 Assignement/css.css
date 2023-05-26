@@ -1,0 +1,554 @@
+/* Author: Michelle Huynh
+Date: 26 5 2023
+
+
+COLOURS:
+#361909 - Dark Brown (For Text)
+#e9c559 - Bright Yellow (For accent only)
+#d32f2f - Red (Bright, accent colour)
+#F6EFD7 - Beige (Background)
+#351421 - Dark Brown (For Accent (Change it, it looks like shit)
+
+*/
+
+
+/* Global
+________________________________________
+
+Global Settings are always applied first, as in CSS, the last is the one applied. The 'global' settings
+for the general main and sidebar content is also placed first for this purpose.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,300;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,600;0,700;1,200;1,300;1,600&display=swap');
+
+/*This wrapper below is used to define the position, as the parent of a child, such as well, the body or
+main content, needs to have its position defined. As this wrapper has no parent, only children, it only defined
+a position so that all other positioning work correctly.
+
+As this applies across he site, the class was used. Any individual wrappers use the once-only id.*/
+
+.wrapper {
+    margin: 0px;
+    max-width: 1440px;
+    position: absolute;
+}
+
+body {
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #361909;
+    margin: 0px;
+}
+
+h2 {
+    font-size: 2.5em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+/*Even without the use of bold or strong, H2 should appear bold at all times
+, ditto H3. To make that happen, its font weight is heavier to look bold.*/
+
+h3 {
+    font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+blockquote {
+    font-size: 0.9em;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+}
+
+a {
+    color: #d32f2f;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    color: #e9c559;
+}
+
+a:visited {
+    color: #e9c559;
+}
+
+/* Header and Navigation
+___________________________________________________________
+*/
+
+header {
+    margin: 0px;
+    top: 0px;
+}
+
+/* Below is what is used for the banner heading. It requires an z-index,
+because it needs to be layered over the banner. It's close to the top left corner of a page,
+and is not connected to any parent box, so absolute is used.
+
+All other positions should be close to how I intend them to be, so relative is used instead so I don't have to
+move it from the top of the page.
+
+When two or more margin or padding transformations are applied, I use
+the margin shorthand instead.*/
+
+header h2 {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: 250px;
+    left: 275px;
+    padding: 50px;
+    outline: double 5px #ffffff;
+    z-index: 2;
+}
+
+/* The logo is positioned absolute, top left corner of the page. It needs a z-index of 2 due
+to the navigation overshadowing it otherwise. */
+
+.logo_image {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+}
+
+/*Below is the what all images should be looking like in CSS.
+The width and height are defined in CSS, not only for stability purposes but also due to cover.
+Cover stretches and resizes the image, to fit within the boundaries set.
+As I don't use a 'background, overlay url' type in CSS, due to the changing images in HTML,
+I use objec-fit instead of background*/
+
+header img {
+    /* 1200 x 500 */
+    object-fit: cover;
+    width: 1440px;
+    height: 520px;
+    position: relative;
+    top: 30px;
+}
+
+/*Padding is used to put the navigation further apart.
+
+I use margins to put space between elements, and I use padding to
+put space WITHIN elements.*/
+
+nav a {
+    font-size: 1.3em;
+    text-decoration: none;
+    color: #d32f2f;
+    padding: 25px 0px 0px 10px;
+
+}
+
+/*Span is used as an additional tag to apply CSS, due to the lack of semantics.
+In this case, I use it to create a style when the user in on the current page.*/
+
+header nav span {
+    color: white;
+    font-size: 1.3em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    padding: 20px 0px 0px 10px;
+}
+
+
+nav a:visited {
+    color: #d32f2f;
+}
+
+nav a:hover {
+    color: #e9c559;
+}
+
+/*A z-index is used to overlay the navigation on top of the header. It is absolute
+due to it being at the abaolute top of the page.*/
+
+header nav {
+    background-color: #351421;
+    position: absolute;
+    top: 0px; left: 0px;
+    width: 1440px;
+    height: 150px;
+    margin: 0px;
+    z-index: 1;
+
+}
+
+header ul {
+    position: relative;
+    width: 1200px;
+    left: 175px;
+    top: 35px;
+
+}
+
+header nav li {
+    display: inline;
+    padding: 0px 25px;
+}
+
+
+/* Main Body Settings
+___________________________________________________________*/
+
+/* Global Main Settings
+_______
+
+Flex-boxes are used for most of the non-block elements, due to their use of use and 
+flexibility, as well as how much they can be changed. For most of the styles, a row-nowrap flex-flow is used,
+as a lot of the page can look off when elements overflow and go underneath the top 'row.', and most
+of the flexboxes are horizontal instead of vertical (column.)
+*/
+
+main {
+    background-color: #F6EFD7;
+    margin-top: 0px;
+    padding: 0px;
+    display: flex;
+    text-align: center;
+}
+
+/* Margins are placed around the text for ease of reading, as
+if it stretches to the ends of the screen, it can be hard to read, and does not look good.
+The padding is used to place space within the element, so that there's some reasonable space
+from one content area to the next. */
+
+main p {
+    margin: 0px 100px;
+    padding-bottom: 50px;
+}
+
+/* Lunch/Dinner Menu Main Settings
+_______
+*/
+
+/* 
+The overall menu should look block like at the start, so the display block is used.
+If the flexbox is used, the opening statement is placed NEXT to the menu, rather than above.
+
+The rest however, is using a flexbox (.menu) to position the menu items in their flexbox as a row.
+
+A padding was placed to fix a CSS error causing a white space above the area.
+_______
+*/
+
+.menu_wrapper {
+    display: block;
+    padding-top: 1px;
+}
+
+.menu_wrapper h3 {
+    margin: 0px 50px;
+    padding-top: 20px;
+    border-top: 3px solid #361909;
+    
+}
+
+/*The default visited and hover colours is hard to read on the beige bg, so
+it is changed to black instead, and with an underline to distinguish it from other text. */
+
+.menu_wrapper a:hover {
+    text-decoration: underline;
+    color: #361909;
+}
+
+.menu_wrapper a:visited {
+    color: #361909;
+    text-decoration: underline;
+}
+
+.menu {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu li img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+}
+
+
+.menu li {
+    list-style: none;
+    justify-content: center;
+    width: 350px;
+    height: 350px;
+    margin: 20px;
+}
+
+.menu li p {
+    margin: 0px 20px;
+    padding: 0px;
+}
+
+/* Find Us Main Settings
+_______
+*/
+
+#contact_wrapper {
+    display: block;
+}
+
+#contact_location {
+    display: flex;
+    margin: 0px 50px;
+}
+
+#contact_location h2 {
+    font-weight: 700;
+}
+
+#contact_location iframe {
+    width: 500px;
+    height: 350px;
+}
+
+#contact_location ol {
+    list-style: none;
+    padding-top: 20px;
+}
+
+#contact_location li {
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 15px 0px;
+}
+
+#contact_contact {
+    display: block;
+}
+
+/*To avoid reduancy by adding all logos but black, a filter was applied
+over the white logos to invert them to black. That way, they are easier to read on the light background. */
+
+#contact_contact img {
+    filter: invert(90%);
+    width: 130px;
+    height: 130px;
+}
+
+#contact_contact p {
+    padding-bottom: 30px;
+}
+
+#contact_contact a {
+    width: 130px;
+    height: 130px;
+}
+
+
+#contact_contact ul {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+    margin-left: 450px;
+    margin-bottom: 0px;
+}
+
+#contact_contact li {
+    padding: 0px 30px 50px 0px;
+}
+
+/* Sidebar Settings
+___________________________________________________________*/
+
+/* Index Sidebar Settings
+_______
+
+To distinguish it from the main content area, it has a white background, and the heading colour is different.
+The index sidebar has a column flexbox rather than a row, as I want them to look like block elements side by side,
+rather than a horizontal row like with the menu.
+*/
+
+#index_sidebar h2 {
+    color: #d32f2f;
+    margin: 0px 50px;
+}
+
+#index_sidebar article {
+    display: flex;
+    margin-top: 15px;
+}
+#index_sidebar section {
+    background: #ffffff;
+    margin: 0px 25px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#index_sidebar iframe {
+    position: relative;
+    width: 500px;
+    top: 30px;
+    margin-left: 50px;
+}
+
+#index_sidebar blockquote {
+    margin: 10px 30px 10px;
+    border-top: 1px solid #351421;
+}
+
+/*A trick was used to create the online affect. All blockquotes only have the top border, to create a line above
+to seperate. But the bottom one also has a bottom border to close off the review section. */
+
+#quote_bottom {
+    margin: 0px 30px 0px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #351421;
+
+}
+
+#tripadvisor {
+    position: relative;
+    width: 300px;
+    height: 180px;
+    bottom: 45px;
+    left: 250px;
+}
+
+#tripadvisor img {
+    width: 300px;
+    height: 180px;
+}
+
+#about_us_sidebar h2 {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+/* About Sidebar Settings
+_______
+
+Many different styles were applied to move the items within the flexbox to around
+their intended positions.
+*/
+
+.about_owners {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+.about_owners section {
+    border-top: 1px solid #2d1305;
+    border-bottom: 1px solid #2d1305;
+}
+
+.about_owners h3 {
+    position: relative;
+    align-self: flex-end;
+    left: 950px;
+    bottom: 20px;
+
+}
+
+.about_owners img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    position: relative;
+    margin: 20px 50px;
+}
+
+.about_owners blockquote {
+    border-top: 1px solid #2d1305;
+    border-bottom: 1px solid #2d1305;
+    font-size: 1.1em;
+}
+
+
+/* Footer
+___________________________________________________________
+
+The footer has a different colour to the content page, and is the same as the header area.
+All colours were adjusted accordingly.*/
+
+footer {
+    background-color: #351421;
+    display: flex;
+    max-width: 1440px;
+}
+
+footer section {
+    padding-left: 100px;
+    margin-top: 15px;
+}
+
+
+footer h2 {
+    margin: 0px 0px 0px 20px;
+    flex-flow: row nowrap;
+    text-align: center;
+    color: #e9c559;
+}
+
+footer p {
+    margin: 0px 50px;
+    color: #ffffff;
+}
+
+/*Padding is applied because the links tend to be a bit smaller. To prevent having
+to have to directly hover your cursor over, a bit of padding was applied to increase the
+'catching' area. */
+
+footer a {
+    padding: 10px;
+}
+
+footer nav li {
+    list-style: none;
+    margin: 20px 0px;
+}
+
+footer nav a {
+    font-size: 1.1em;
+}
+
+/*The bottom class is used to apply properties to unrelated paragraphs. It notably has
+inline rather than flex. This is because inline is simplr than a box: It puts everything on one line.
+This is all that's really needed for this section, and using flex boxes can cause unintended wrapping and layering. */
+
+.bottom_footer {
+    display: block;
+    position: relative;
+    right: 900px;
+    top: 300px;
+    height: 10px;
+}
+
+.bottom_footer p {
+    font-size: 0.8em;
+    display: inline;
+    margin: 0px 0px;
+}
+.bottom_footer a {
+    padding: 0px 10px;
+}
+
+.nav_contact {
+    display: flex;
+    flex-flow: row wrap;
+    width: 500px;
+}
+
+.nav_contact li img {
+    list-style: none;
+    padding: 0px 15px;
+}
+
+
