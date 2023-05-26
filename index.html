@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Mint Asian Cafe | Home</title>
+    <link rel="icon" href="img/mint_logo_sm.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!--HEADER-->
+
+    <header>
+        <h1>The Mint Asian Cafe</h1>
+
+        <!--The H2 below is the heading put in the banner. While important, it mainly serves as a visual addition
+        for easier reading, so no semantic tags such as strong is applied.
+    
+        Additionally, below this is a class. For most intents, class should be used for anything that's repeated, and can work
+        across pages. As header and footers must apply changes to all pages across the site, any selectors will be a class,
+        not an ID, which can be used once.-->
+        <h2>Our Restaurant</h2>
+        
+        <img src="img/mint_logo.png" alt="Mint Asian Cafe Logo" width="128" height="128" class="logo_image">
+
+        <!-- NAVIGATION. Navigation is placed at the top for ease of use. There will also be secondary navigation at the footer.
+        
+        As the order does not matter in this navigation, the list is an unordered list (UL)
+
+        As the viewer is already on the page, the index link is blanked out. 
+        A span tag has no semantic meaning, but is used for CSS purposes.-->
+        <nav id="top_home">
+            <ul>
+                <li><span>Home</span></li>
+                <li><a href="about.html" title="About">About Us</a></li>
+                <li><a href="menu.html" title="Lunch Menu">Lunch Menu</a></li>
+                <li><a href="menu_night.html" title="Dinner Menu">Dinner Menu</a></li>
+                <li><a href="find.html" title="Contact Us">Find Us</a></li>
+            </ul>
+        </nav>
+
+        <!-- BANNER IMAGE. As my secondary audience comprises of tourists, who may not be fluent in English, the first image is of the cafe's cuisine, to introduce others to food. -->
+
+        <img src="img/index_banner.jpg" alt="Mint Asian Cafe Image Banner" width="1440" height="512">
+
+        <!--The Banner Image is intended to be large, to cover the page and introduce the website by an appealing visual.-->
+
+    </header>
+
+
+
+    <main> 
+
+        <!-- INTRODUCION AREA: THE MINT ASIAN CAFE OVERVIEW. This is the start of the page content. 
+            Heading 2 is used, as heading 1 is often reserved for the title of the website-->
+
+        <article>
+
+            <section>
+
+                <h2><strong>Welcome to the Mint Asian Cafe</strong></h2>
+
+                <!--Strong is used to semantically show a text is meaninggul to the page. It will be used for the start of any page or article,
+                as they are important parts of estbalishing the pagge-->
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Morbi quis commodo odio aenean sed adipiscing diam donec. Laoreet id donec ultrices tincidunt arcu non sodales. 
+                    Ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget gravida.<br>
+
+                    Sed velit dignissim sodales ut eu sem integer. Consectetur libero id faucibus nisl tincidunt eget nullam non. 
+                    Diam phasellus vestibulum lorem sed risus ultricies. Massa massa ultricies mi quis hendrerit dolor. 
+                    Lorem ipsum dolor sit amet.
+                </p>
+                
+            </section>
+
+        </article>
+
+
+    </main>
+
+    <aside id="index_sidebar">
+
+        <!-- SIDEBAR - Address and Reviews
+        The following is useful information that cannot be fitted in much else, however it is not relevent to the overall
+        introducetion page, and thus is a sidebar, an aside. Additionally, they are seperated into articles, as they are seperate topics, two different sidebars.-->
+
+        <article>
+
+            <section>
+
+                <!-- GOOGLE MAPS SIDEBAR: EMBED MAP FILE
+                
+                This is for convienince, as opposed to a static image-->
+
+                <h2>Our Address</h2>   
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1579.2208654646784!2d115.86595113573013!3d-31.957260788858104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a32bb26c1818aef%3A0xd94a10f2b63ab87a!2sThe%20Mint%20Asian%20-%20Noodle%20%26%20Rice!5e0!3m2!1sen!2sau!4v1681435596629!5m2!1sen!2sau" width="600" height="450" 
+                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </section>
+
+            <section>
+
+                <h2>Our Customer Reviews</h2>
+
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                <blockquote>
+                    <p><i>"Lorem ipsum dolor sit amet!"</i></p>
+                    <p>-Jane Doe</p>
+                </blockquote>
+
+                <blockquote id="quote_bottom">
+                    <p><i>"Consectetur libero id faucibus nisl. Excepteur sint occaecat!"</i></p>
+                    <p>-John Smith</p>
+                </blockquote>
+
+                <!--An image link is used instead of text, as it is going to an outside site. The blockquote above is
+                defined for CSS purposes, as a way to display a 'one line' seperation between quotes.-->
+
+                <a href="https://www.tripadvisor.com/Restaurant_Review-g255103-d8054504-Reviews-The_Mint_Asian_Cafe-Perth_Greater_Perth_Western_Australia.html" 
+                title = "Tripadvisor Mint Asian Cafe" rel="external" target="_blank" id="tripadvisor">
+                    <img src="img/tripadvisor_logo.png" alt = "Tripadvisor Logo" width = "512" height = "288">
+                </a>
+
+            </section>
+
+        </article>
+
+    </aside>
+
+    <footer>
+
+        <!--FOOTER-->
+
+        <section>
+            <h2>Contact Information</h2>
+
+            <!--An address shows the contact information, and thus the location, and email, the inperson and online ways of communications is in the element.-->
+
+            <address>
+                <p><i>Find us at Mint House 326 Hay St, Perth, AU 6000</i></p>
+            </address>
+
+            <p>Find our social media:</p>
+
+            <!--Once again, order is not required. Visual Links are used once again to appeal to the millennial generation.
+            As this footer applies throughout the site, class and not ID is used.-->
+
+
+            <ul class="nav_contact">
+                <li><a href="https://www.facebook.com/"  title="Mint Asian Cafe Facebook" rel="external" target="_blank">
+                    <img src="img/facebook_logo.png" alt="Facebook Logo Link" width ="64" height="64">
+                </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/"  title="Mint Asian Cafe Instagram" rel="external" target="_blank">
+                    <img src="img/instagram_logo.png" alt="Instagram Logo Link" width ="64" height="64">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com"  title="Mint Asian Cafe LinkedIn" rel="external" target="_blank">
+                    <img src="img/linkedin_logo.png" alt="Instagram Logo Link" width ="64" height="64">
+                    </a>
+                </li>
+            </ul>
+
+        </section>
+
+        <section>
+
+            <!--A secondary navigation is for ease of use at the bottom, as the pages can get quite long and cumbersome to navigate back up.
+            An option to jump back up to the top of the page is used, if the user wishes to view the page again. -->
+
+
+            <h2>Navigation</h2>
+            <nav>
+                <ul>
+                    <li><a href="#top_home">Home</a></li>
+                    <li><a href="about.html" title="About">About Us</a></li>
+                    <li><a href="menu.html" title="Lunch Menu">Lunch Menu</a></li>
+                    <li><a href="night_menu.html" title="Dinner Menu">Dinner Menu</a></li>
+                    <li><a href="find.html" title="Contact Us">Contact Us</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <!--This is additional information at the bottom. They're not related together semanticaly but
+        still need the same properties in CSS, so they're put in a div container, which doesn't mean anything
+        to the browser.-->
+
+        <div class="bottom_footer">
+            <p><i><a href="mailto:mintasian@gmail.com">MintAsian@gmail.com</a></i></p>
+            <p>&copy; The Mint Asian Cafe 2023</p>
+        </div>
+
+        
+    </footer>
+
+</div>
+    
+</body>
+
+</html>

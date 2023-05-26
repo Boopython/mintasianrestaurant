@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Mint Asian Cafe | About</title>
+    <link rel="icon" href="img/mint_logo_sm.png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!--HEADER-->
+
+    <header>
+
+        <h1>The Mint Asian Cafe</h1>
+        <h2>About Us</h2>
+        <a href="index.html" title="Home">
+            <img src="img/mint_logo.png" alt="Mint Asian Cafe Logo" width="128" height="128" class="logo_image">
+        </a>
+
+         <!-- NAVIGATION. Navigation is placed at the top for ease of use. There will also be secondary navigation at the footer. -->
+        <nav id="top_about">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><span>About Us</span></li>
+                <li><a href="menu.html" title="Menu">Lunch Menu</a></li>
+                <li><a href="menu_night.html">Dinner Menu</a></li>
+                <li><a href="find.html" title="Contact Us">Find Us</a></li>
+            </ul>
+        </nav>
+
+         <!-- BANNER IMAGE. As my secondary audience comprises of tourists, who may not be fluent in English, the first image is of the cafe's cuisine, to introduce others to food. -->
+
+         <img src="img/about_banner.jpg" alt="Mint Asian Cafe Image Banner" width="1440" height="512">
+         
+
+    </header>
+
+    <!--MAIN CONTENT AREA - About us-->
+
+    <main>
+
+        <article>
+
+            <section>
+
+                <h2><strong>Who We Are</strong></h2>
+
+                <p>Quis auctor elit sed vulputate. Placerat in egestas erat imperdiet sed euismod nisi. 
+                    Risus viverra adipiscing at in tellus integer feugiat scelerisque. Sit amet venenatis urna cursus eget nunc scelerisque. 
+                    Augue eget arcu dictum varius duis at consectetur lorem. Faucibus pulvinar elementum integer enim neque volutpat ac tincidunt. 
+                    Adipiscing commodo elit at imperdiet dui accumsan sit amet.<br>
+                
+                    Nisi est sit amet facilisis magna etiam. Orci phasellus egestas tellus rutrum tellus pellentesque. 
+                    Est pellentesque elit ullamcorper dignissim cras. Vulputate odio ut enim blandit volutpat maecenas volutpat blandit.Orci phasellus egestas tellus rutrum tellus pellentesque. Est pellentesque elit ullamcorper dignissim cras. 
+                    Vulputate odio ut enim blandit volutpat maecenas volutpat blandit.</p>
+
+            </section>
+
+        </article>
+
+    </main>
+
+    <!--ABOUT US SIDEBAR - The Owners
+
+        This side bar is not strictly important information.-->
+
+    <aside id="about_us_sidebar">
+
+        <article>
+
+            <h2><b>The Owners</b></h2>
+
+            <!--While not important to the article, thus the bold over the strong, this sidebar has quotes from the owners to better connect with the users and
+            so should be more visible to them. 
+        
+            Since these sections are meant to look like block-elements while still being a flexbox in CSS to position everything, the
+            class is applied to the sections and not the article, so the sections themselves are still seperated. Also, it makes the 
+            border style be applied to both rather than one big border.-->
+
+            <section class="about_owners">
+
+                <h3><b>Tristique Senectus</b></h3>
+
+                <blockquote>"Nisi est sit amet facilisis magna etiam. Orci phasellus egestas tellus rutrum tellus pellentesque. 
+                    Est pellentesque elit ullamcorper dignissim cras. Vulputate odio ut enim blandit volutpat maecenas volutpat blandit."</blockquote>
+
+                <img src="img/boss_one.jpg" alt="Mint Asian Cafe Co-Owner One" width="330" height="330">
+
+
+            </section>
+
+            <section class="about_owners">
+
+                <h3><b>Ipsum Faucibus</b></h3>
+
+                <blockquote>"Nisi est sit amet facilisis magna etiam. Orci phasellus egestas tellus rutrum tellus pellentesque. 
+                    Est pellentesque elit ullamcorper dignissim cras. Vulputate odio ut enim blandit volutpat maecenas volutpat blandit."</blockquote>
+
+            <img src="img/boss_two.jpg" alt="Mint Asian Cafe Co-Owner Two" width="330" height="330">
+
+            </section>
+
+
+        </article>
+
+    </aside>
+
+    <!--FOOTER-->
+
+    <footer>
+
+        <section>
+            <h2>Contact Information</h2>
+
+            <address>
+                <p><i>Find us at Mint House 326 Hay St, Perth, AU 6000</i></p>
+            </address>
+
+            <p>Find our social media:</p>
+
+
+            <ul class="nav_contact">
+                <li><a href="https://www.facebook.com/"  title="Mint Asian Cafe Facebook" rel="external" target="_blank">
+                    <img src="img/facebook_logo.png" alt="Facebook Logo Link" width ="64" height="64">
+                </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/"  title="Mint Asian Cafe Instagram" rel="external" target="_blank">
+                    <img src="img/instagram_logo.png" alt="Instagram Logo Link" width ="64" height="64">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com"  title="Mint Asian Cafe LinkedIn" rel="external" target="_blank">
+                    <img src="img/linkedin_logo.png" alt="Instagram Logo Link" width ="64" height="64">
+                    </a>
+                </li>
+            </ul>
+
+        </section>
+
+        <section>
+            <h2>Navigation</h2>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#top_about" title="About">About Us</a></li>
+                    <li><a href="menu.html" title="Lunch Menu">Lunch Menu</a></li>
+                    <li><a href="night_menu.html" title="Dinner Menu">Dinner Menu</a></li>
+                    <li><a href="find.html" title="Contact Us">Contact Us</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <div class="bottom_footer">
+            <p><i><a href="mailto:mintasian@gmail.com">MintAsian@gmail.com</a></i></p>
+            <p >&copy; The Mint Asian Cafe 2023</p>
+        </div>
+
+    </footer>
+
+</div>
+    
+</body>
+
+</html>
